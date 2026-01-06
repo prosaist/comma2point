@@ -1,0 +1,2 @@
+copy .\Win64\Release\comma2point.exe %PUBLIC%
+powershell -Command "$shortcut = (New-Object -COM WScript.Shell).CreateShortcut('%APPDATA%\Microsoft\Windows\SendTo\comma2point.lnk'); $shortcut.TargetPath = '%PUBLIC%\comma2point.exe'; $shortcut.Save()"
